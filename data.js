@@ -18,14 +18,14 @@ export const menuArray = [
         location: "Monsters of Rock Cruise",
         price: 110,
         thumbnail: "aceV.jpeg",
-        id: 1
+        id: 2
     },
     {
         name: "Jeff Keith",
         location: "Pittsburgh, PA",
         price: 110,
         thumbnail: "jeffKeith.jpeg",
-        id: 1
+        id: 3
     },
 ]
 

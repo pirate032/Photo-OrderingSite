@@ -93,9 +93,9 @@ function renderOrderHTML(orderArr) {
         return orderArr.map(orderItem => {
         const {
             name,
-            ingredients,
+            location,
             price,
-            emoji,
+            thumbnail,
             id
         } = orderItem
         total += price
