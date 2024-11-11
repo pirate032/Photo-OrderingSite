@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     width: 600px;
     font-family: "Smythe", system-ui;
+    background-color: #000000;
 } 
 .gradient {
      background-image: linear-gradient(#FFFFFF, #CED4DA, #FFFFFF);
@@ -30,7 +31,8 @@ h1 {
     margin: 46px auto;
 }
 .menu-container, .order-item-container, .total-container {
-    color: #000000;
+    /* color: #000000; */
+    color: #FFFFFF;
     width: 508px;
     display: flex;
     flex-direction: row;
@@ -51,7 +53,7 @@ h1 {
 .item-ingredients {
     font-size: 16px;
     margin: 0;
-    color: #8B8B8B;
+    color: #FFFFFF;
     line-height: 24px;
 }
 .item-price {
@@ -62,8 +64,8 @@ h1 {
     margin-left: auto;
 }
 .add-item-btn {
-    color: #3C3C3C;
-    background-color: white;
+    color: #FFFFFF;
+    background-color: #822faf;
     border: 1px solid #DEDEDE;
     border-radius: 50%;
     width: 50px;
@@ -77,7 +79,7 @@ h1 {
 }
 
 .menu-line {
-    color: #D2D2D2;
+    color: #822faf;
 }
 .total-line {
     color: #393333;
@@ -103,7 +105,7 @@ h1 {
     font-size: 12px;
     color: #BBBBBB;
     border: none;
-    background-color: white;
+    background-color: #000000;
     margin-left: 12px;
 }
 .item-cost, .total-cost {
@@ -112,7 +114,7 @@ h1 {
     padding-top: 5px;
 }
 .complete-order-btn {
-    background-color: #16DB99;
+    background-color: #822faf;
     color: #FFFFFF;
     border: none;
     border-radius: 3px;

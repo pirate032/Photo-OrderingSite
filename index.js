@@ -14,35 +14,30 @@ let totalPrice = 0
 let indexForRemove = -1
 
 document.addEventListener ('click', function(e){
-   
+   console.log(e.target)
     if(e.target.dataset.add){
         //function to push item to order array
         addItemToOrder(e.target.dataset.add)
     }
-    if(e.target.dataset.remove){
+    else if(e.target.dataset.remove){
         //function to remove item from order array
         removeOrderedItem(e.target.dataset.remove)
         document.getElementById('order').innerHTML = renderOrderHTML(orderArray)
         document.getElementById('total').innerHTML = renderTotalHTML()
         updateVisibility()
     }
-    if(e.target.dataset.btnComplete) {
-        console.log(e.target.dataset.btnComplete)
+    else if(e.target.id==='complete-order-btn') {
+        console.log("in complete click event")
+        //completeOrderBtn.parentElement.classList.add('gradient')
+        modal.style.display="block"
     }
-})
-
-completeOrderBtn.addEventListener('click', function(){
-    completeOrderBtn.parentElement.classList.add('gradient')
-    modal.style.display="block"
-})
-
-payBtn.addEventListener('click', function(){
-    handlePaymentAndClose()
-})
-
-closeModal.addEventListener('click', function(){
-    modal.style.display = "none"
-    completeOrderBtn.parentElement.classList.remove('gradient')
+    else if(e.target.id==='pay-btn') {
+        handlePaymentAndClose()
+    }
+    else if(e.target.id==='close-modal'){
+        modal.style.display = "none"
+        //completeOrderBtn.parentElement.classList.remove('gradient')
+    }
 })
 
 function renderMenuHTML(menuArr) {
@@ -110,6 +105,12 @@ function renderOrderHTML(orderArr) {
             </div> 
             `    
         }).join('')
+}
+
+function disableMainButtons (menuArr, orderArr) {
+    orderArr.forEach(order => {
+        
+    });
 }
 
 function renderTotalHTML() {
