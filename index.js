@@ -5,30 +5,29 @@ const order = document.getElementById('order')
 const total = document.getElementById('total')
 const completeOrderBtn = document.getElementById('complete-order-btn')
 const modal = document.getElementById('modal')
-const payBtn = document.getElementById('pay-btn')
 const message = document.getElementById('message')
-const closeModal = document.getElementById('close-modal')
 
 let orderArray = []
 let totalPrice = 0
 let indexForRemove = -1
+let disableButtons = false
 
 document.addEventListener ('click', function(e){
    console.log(e.target)
-    if(e.target.dataset.add){
-        //function to push item to order array
+    if(e.target.dataset.add && disableButtons===false){
+        //push item to order array
         addItemToOrder(e.target.dataset.add)
     }
-    else if(e.target.dataset.remove){
-        //function to remove item from order array
+    else if(e.target.dataset.remove && disableButtons === false){
+        //remove item from order array
         removeOrderedItem(e.target.dataset.remove)
         document.getElementById('order').innerHTML = renderOrderHTML(orderArray)
         document.getElementById('total').innerHTML = renderTotalHTML()
         updateVisibility()
     }
-    else if(e.target.id==='complete-order-btn') {
-        console.log("in complete click event")
-        //completeOrderBtn.parentElement.classList.add('gradient')
+    else if(e.target.id==='complete-order-btn' && disableButtons===false) {
+        //disable all buttons on main screen when the modal comes up
+        disableMainButtons ()
         modal.style.display="block"
     }
     else if(e.target.id==='pay-btn') {
@@ -36,7 +35,7 @@ document.addEventListener ('click', function(e){
     }
     else if(e.target.id==='close-modal'){
         modal.style.display = "none"
-        //completeOrderBtn.parentElement.classList.remove('gradient')
+        enableMainButtons()
     }
 })
 
@@ -107,10 +106,12 @@ function renderOrderHTML(orderArr) {
         }).join('')
 }
 
-function disableMainButtons (menuArr, orderArr) {
-    orderArr.forEach(order => {
-        
-    });
+function disableMainButtons() {
+    disableButtons = true
+}
+
+function enableMainButtons() {
+    disableButtons = false
 }
 
 function renderTotalHTML() {
@@ -124,7 +125,7 @@ function renderTotalHTML() {
 }
 
 function removeOrderedItem(orderId) {
-    //function to remove an ordered item
+    //remove an ordered item
     const arr = orderArray.map(function(order, index){ 
         if(order.id === Number(orderId)){
             indexForRemove = index
@@ -154,8 +155,6 @@ function handlePaymentAndClose() {
     const cvv = document.getElementById('cvv').value
    
     if(fullName !== '' && cardNumber !== '' && cvv !== '') {
-         //gradient on main screen will be removed when payment is complete
-        completeOrderBtn.parentElement.classList.remove('gradient')
         //first make the modal and the order section go away
         modal.style.display = "none"
         orderArray = []
@@ -167,6 +166,8 @@ function handlePaymentAndClose() {
         document.getElementById('fullName').value = ''
         document.getElementById('cardNumber').value = ''
         document.getElementById('cvv').value = ''
+        //enable buttons
+        enableMainButtons()
     }
 }
  

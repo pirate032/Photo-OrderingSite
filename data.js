@@ -1,7 +1,7 @@
 export const menuArray = [
     {
         name: "Steven Tyler",
-        location: "Las Vegas, NV",
+        location: "Sunrise, FL",
         id: 0,
         price: 140,
         thumbnail: "stevenTyler.jpeg"
