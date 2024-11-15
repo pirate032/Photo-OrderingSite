@@ -9,14 +9,14 @@ html, body {
      background-image: linear-gradient(#FFFFFF, #CED4DA, #FFFFFF);
 }
 header {
-    background-image: url("/images/mainPhoto.jpg");
+    background-image: url("/images/IMG_7419_BB.jpg");
     background-size: cover;
     height: 270px;
     color: #FFFFFF;
     font-weight: 100;
 }
 h1 {
-    margin: 46px 0 0 46px;
+    margin: 46px 0 0 20px;
     font-size: 39px;
 }
 .header-text {
@@ -24,7 +24,7 @@ h1 {
     flex-direction: column;
 }
 .subtitle {
-    margin: 0 0 0 46px;
+    margin: 0 0 0 20px;
     font-size: 22px;
 }
 .menu-container {
