@@ -9,7 +9,7 @@ html, body {
      background-image: linear-gradient(#FFFFFF, #CED4DA, #FFFFFF);
 }
 header {
-    background-image: url("/mainPhoto.jpg");
+    background-image: url("/images/mainPhoto.jpg");
     background-size: cover;
     height: 270px;
     color: #FFFFFF;
