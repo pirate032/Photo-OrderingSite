@@ -4,13 +4,15 @@ export const menuArray = [
         location: "Sunrise, FL",
         id: 0,
         price: 140,
-        thumbnail: "stevenTyler.jpeg"
+        thumbnail: "stevenTyler.jpeg",
+        alt: "black and white image of Steven Tyler in a hat"
     },
     {
         name: "Frank Hannon",
         location: "M3 Festival, Columbia, MD",
         price: 120,
         thumbnail: "frankHannon.jpeg",
+        alt: "Frank Hannon of Tesla playing guitar",
         id: 1
     },
     {
@@ -18,6 +20,7 @@ export const menuArray = [
         location: "Monsters of Rock Cruise",
         price: 110,
         thumbnail: "aceV.jpeg",
+        atl: "Ace Van Johnson playing guitar",
         id: 2
     },
     {
@@ -25,6 +28,7 @@ export const menuArray = [
         location: "Pittsburgh, PA",
         price: 110,
         thumbnail: "jeffKeith.jpeg",
+        alt: "Jeff Keith of Tesla, singing to the camera",
         id: 3
     },
 ]
