@@ -73,6 +73,13 @@ h1 {
     font-size: 32px;
     font-weight: 100;
 }
+
+.add-item-btn:hover, 
+.complete-order-btn:hover,
+.remove-btn:hover {
+    background-color: #4a4e69;
+}
+
 .menu-line, .total-line {
     width: 504px;
     margin-left: 46px;
@@ -182,6 +189,10 @@ h3 {
     padding: 20px 0;
     font-size: 20px;
     font-weight: bold;
+}
+.close-modal:hover,
+.pay-btn:hover {
+    background-color: #d8e2dc !important;
 }
 /* Message for completed order */
 .message {
