@@ -96,13 +96,10 @@ h1 {
 .menu-line, .total-line {
     width: 90%;
     margin-left: 0 auto;
-}
-
-.menu-line {
     color: #822faf;
 }
+
 .total-line {
-    color: #393333;
     /* margin-top: 25px; */
     margin-top: 1.5em;
 }
